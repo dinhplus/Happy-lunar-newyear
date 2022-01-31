@@ -25,6 +25,7 @@ $(function(){
         var clock = $('.clock');
         if(diffTime < 0){
             endEvent(subMessage, config.newSubMessage, clock);
+            $('#container').html('<h1>Happy Lunnar New Year!<h1>');
             return;
         }
         if(days > 0){
@@ -40,6 +41,7 @@ $(function(){
             if(hours  <= 0 && minutes <= 0 && seconds  <= 0 && days <= 0){
                 clearInterval(intervalID);
                 endEvent(subMessage, config.newSubMessage, clock);
+                $('#container').html('<h1>Happy Lunnar New Year!<h1>');
                 window.location.reload();
             }
             if(days === 0){
